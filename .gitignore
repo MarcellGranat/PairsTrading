@@ -19,6 +19,7 @@
 
 # RStudio files
 .Rproj.user/
+PairsTrading.Rproj
 
 # produced vignettes
 vignettes/*.html
