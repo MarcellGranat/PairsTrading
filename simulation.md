@@ -30,8 +30,8 @@ simulate_trivariate_2ci <- function(t = 250, p = .75, innov_sd = .5) {
 ``` r
 df <- expand.grid(
   t = 1:20 * 50,
-  p = 1:9 / 10,
-  rank = 1:1000 # number of iterations
+   p = c(1:9 / 10, .92, .94, .96, .98),
+  rank = 1:10 # number of iterations
 ) 
 ```
 
@@ -93,6 +93,28 @@ walk(
 ![](simulation_files/figure-gfm/unnamed-chunk-5-.gif)<!-- -->
 
 ``` r
+walk(
+  1:20 * 50,
+  ~ {p <- filter(df, t == .) %>% 
+    count(p, rank) %>% 
+    group_by(p) %>% 
+    group_modify(~ mutate(.x, n = n / sum(n))) %>% 
+    ungroup() %>% 
+    mutate(
+      rank = factor(rank, levels = as.character(3:0))
+    ) %>% 
+    ggplot(aes(p, n, fill = rank)) + 
+    geom_col(color = "black") + 
+    scale_fill_discrete(drop = FALSE) +
+    labs(title = "Sensitivity to sample size", subtitle = str_c("t = ", .), fill = "Estimated rank")
+  print(p)  
+  }
+)
+```
+
+![](simulation_files/figure-gfm/unnamed-chunk-6-.gif)<!-- -->
+
+``` r
 df %>% 
   count(t, p, rank) %>% 
   group_by(t, p) %>% 
@@ -106,15 +128,84 @@ df %>%
   labs(title = "# estimated rank == 1", fill = "rate")
 ```
 
-![](simulation_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](simulation_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 ### Effect of variance
+
+#### sd vs. t
+
+``` r
+df <- expand.grid(
+  t = 1:20 * 50,
+  innov_sd = c(.2, .5, 1, 1.5, 2),
+  rank = 1:10 # number of iterations
+) 
+```
+
+``` r
+set.seed(2021)
+
+for (i in 1:100) { # not enough memory >> perform iteratively w loop
+  row_n <- 1:nrow(df)
+  row_n <- row_n[cut(row_n, 100, FALSE) == i]
+  
+  df[row_n, ] <- df %>% 
+    .[row_n, ] %>% 
+    mutate(
+      dgp = map2(t, innov_sd, ~ simulate_trivariate_1ci(t = .x, innov_sd = .y)),
+      model = map(dgp, ~ VECM(data = ., lag = 0, estim = "ML", include = "none")),
+      rank = map_dbl(model, ~ rank.test(vecm = ., type = 'trace', cval = 0.05)$r),
+    ) %>% 
+    select(t, innov_sd, rank)
+}
+```
+
+``` r
+df %>% 
+  filter(t == 200) %>% 
+  count(innov_sd, rank) %>% 
+  group_by(innov_sd) %>% 
+  group_modify(~ mutate(.x, n = n / sum(n))) %>% 
+  ungroup() %>% 
+  mutate(
+    rank = factor(rank, levels = as.character(3:0))
+  ) %>% 
+  ggplot(aes(innov_sd, n, fill = factor(rank))) + 
+  geom_col(color = "black") + 
+  labs(title = "Sensitivity to sample size, t = 200", fill = "Estimated rank")
+```
+
+![](simulation_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+
+``` r
+walk(
+  1:20 * 50,
+  ~ {p <- df %>% 
+    filter(t == .) %>% 
+    count(innov_sd, rank) %>% 
+    group_by(innov_sd) %>% 
+    group_modify(~ mutate(.x, n = n / sum(n))) %>% 
+    ungroup() %>% 
+    mutate(
+      rank = factor(rank, levels = as.character(3:0))
+    ) %>% 
+    ggplot(aes(innov_sd, n, fill = factor(rank))) + 
+    geom_col(color = "black") + 
+  labs(title = "Sensitivity to sample size", subtitle = str_c("t = ", .), fill = "Estimated rank")
+  print(p)
+  }
+)
+```
+
+![](simulation_files/figure-gfm/unnamed-chunk-11-.gif)<!-- -->
+
+#### sd vs. p
 
 ``` r
 df <- expand.grid(
   p = c(1:4 / 5, .9, .92, .94, .96, .98),
-  innov_sd = c(.1, .5, 1, 10, 30),
-  rank = 1:1000 # number of iterations
+  innov_sd = c(.2, .5, 1, 1.5, 2),
+  rank = 1:10 # number of iterations
 ) 
 ```
 
@@ -151,15 +242,17 @@ df %>%
   labs(title = "# estimated rank == 1", fill = "rate")
 ```
 
-![](simulation_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](simulation_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 ## Two ci
+
+### Effect of AR term
 
 ``` r
 df <- expand.grid(
   t = 1:20 * 50,
-  p = 1:9 / 10,
-  rank = 1:1000 # number of iterations
+  p = c(1:9 / 10, .92, .94, .96, .98),
+  rank = 1:10 # number of iterations
 ) 
 ```
 
@@ -196,11 +289,11 @@ df %>%
   labs(title = "Sensitivity to sample size, p = 0.7", fill = "Estimated rank")
 ```
 
-![](simulation_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](simulation_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 ``` r
 walk(
-  1:9 / 10,
+  c(1:9 / 10, .92, .94, .96, .98),
   ~ {p <- filter(df, p == .) %>% 
     count(t, rank) %>% 
     group_by(t) %>% 
@@ -218,7 +311,29 @@ walk(
 )
 ```
 
-![](simulation_files/figure-gfm/unnamed-chunk-13-.gif)<!-- -->
+![](simulation_files/figure-gfm/unnamed-chunk-18-.gif)<!-- -->
+
+``` r
+walk(
+  1:20 * 50,
+  ~ {p <- filter(df, t == .) %>% 
+    count(p, rank) %>% 
+    group_by(p) %>% 
+    group_modify(~ mutate(.x, n = n / sum(n))) %>% 
+    ungroup() %>% 
+    mutate(
+      rank = factor(rank, levels = as.character(3:0))
+    ) %>% 
+    ggplot(aes(p, n, fill = rank)) + 
+    geom_col(color = "black") + 
+    scale_fill_discrete(drop = FALSE) +
+    labs(title = "Sensitivity to sample size", subtitle = str_c("t = ", .), fill = "Estimated rank")
+  print(p)  
+  }
+)
+```
+
+![](simulation_files/figure-gfm/unnamed-chunk-19-.gif)<!-- -->
 
 ``` r
 df %>% 
@@ -234,15 +349,84 @@ df %>%
   labs(title = "# estimated rank == 2", fill = "rate")
 ```
 
-![](simulation_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](simulation_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 ### Effect of variance
+
+#### sd vs. t
+
+``` r
+df <- expand.grid(
+  t = 1:20 * 50,
+  innov_sd = c(.2, .5, 1, 1.5, 2),
+  rank = 1:10 # number of iterations
+) 
+```
+
+``` r
+set.seed(2021)
+
+for (i in 1:100) { # not enough memory >> perform iteratively w loop
+  row_n <- 1:nrow(df)
+  row_n <- row_n[cut(row_n, 100, FALSE) == i]
+  
+  df[row_n, ] <- df %>% 
+    .[row_n, ] %>% 
+    mutate(
+      dgp = map2(t, innov_sd, ~ simulate_trivariate_1ci(t = .x, innov_sd = .y)),
+      model = map(dgp, ~ VECM(data = ., lag = 0, estim = "ML", include = "none")),
+      rank = map_dbl(model, ~ rank.test(vecm = ., type = 'trace', cval = 0.05)$r),
+    ) %>% 
+    select(t, innov_sd, rank)
+}
+```
+
+``` r
+df %>% 
+  filter(t == 200) %>% 
+  count(innov_sd, rank) %>% 
+  group_by(innov_sd) %>% 
+  group_modify(~ mutate(.x, n = n / sum(n))) %>% 
+  ungroup() %>% 
+  mutate(
+    rank = factor(rank, levels = as.character(3:0))
+  ) %>% 
+  ggplot(aes(innov_sd, n, fill = factor(rank))) + 
+  geom_col(color = "black") + 
+  labs(title = "Sensitivity to sample size, t = 200", fill = "Estimated rank")
+```
+
+![](simulation_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+
+``` r
+walk(
+  1:20 * 50,
+  ~ {p <- df %>% 
+    filter(t == .) %>% 
+    count(innov_sd, rank) %>% 
+    group_by(innov_sd) %>% 
+    group_modify(~ mutate(.x, n = n / sum(n))) %>% 
+    ungroup() %>% 
+    mutate(
+      rank = factor(rank, levels = as.character(3:0))
+    ) %>% 
+    ggplot(aes(innov_sd, n, fill = factor(rank))) + 
+    geom_col(color = "black") + 
+  labs(title = "Sensitivity to sample size", subtitle = str_c("t = ", .), fill = "Estimated rank")
+  print(p)
+  }
+)
+```
+
+![](simulation_files/figure-gfm/unnamed-chunk-24-.gif)<!-- -->
+
+#### sd vs. p
 
 ``` r
 df <- expand.grid(
   p = c(1:4 / 5, .9, .92, .94, .96, .98),
-  innov_sd = c(.1, .5, 1, 10, 30),
-  rank = 1:1000 # number of iterations
+  innov_sd = c(.2, .5, 1, 1.5, 2),
+  rank = 1:10 # number of iterations
 ) 
 ```
 
@@ -279,4 +463,4 @@ df %>%
   labs(title = "# estimated rank == 2", fill = "rate")
 ```
 
-![](simulation_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](simulation_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
