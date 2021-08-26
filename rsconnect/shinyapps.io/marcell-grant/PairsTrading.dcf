@@ -1,0 +1,13 @@
+name: PairsTrading
+title: PairsTrading
+username:
+account: marcell-grant
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4309273
+bundleId: 4766234
+url: https://marcell-grant.shinyapps.io/PairsTrading/
+when: 1624915328.70661
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|estimation.rds|financial_test.R|README.md|simulation.md|simulation.R|simulation.Rmd|simulation_ommited.R|SimulationSummary.md|simulation_files
