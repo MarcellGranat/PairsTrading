@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.2.5)  10 SEP 2021 02:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.2.5)  10 SEP 2021 22:27
 entering extended mode
 **./unkp_study.tex
 (unkp_study.tex
@@ -577,11 +577,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) (unkp_study.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 4.
+(Font)              <10> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 4.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 4.
+(Font)              <5> on input line 3.
 )
 \tf@toc=\write4
 \openout4 = `unkp_study.toc'.
@@ -601,159 +601,201 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 pdfTeX warning: pdflatex.exe (file ./literature_map.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<literature_map.pdf, id=53, 963.6pt x 542.025pt>
+<literature_map.pdf, id=80, 963.6pt x 542.025pt>
 File: literature_map.pdf Graphic file (type pdf)
 <use literature_map.pdf>
-Package pdftex.def Info: literature_map.pdf  used on input line 147.
+Package pdftex.def Info: literature_map.pdf  used on input line 177.
 (pdftex.def)             Requested size: 469.75679pt x 264.23819pt.
-<unkp_study_files/figure-latex/unnamed-chunk-3-1.pdf, id=55, 469.755pt x 325.21
-5pt>
+[3 <./literature_map.pdf>] [4] [5] [6] [7]
+<unkp_study_files/figure-latex/unnamed-chunk-3-1.pdf, id=189, 469.755pt x 325.2
+15pt>
 File: unkp_study_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pd
 f)
 <use unkp_study_files/figure-latex/unnamed-chunk-3-1.pdf>
 Package pdftex.def Info: unkp_study_files/figure-latex/unnamed-chunk-3-1.pdf  u
-sed on input line 168.
+sed on input line 600.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-LaTeX Warning: Reference `fig3' on page 3 undefined on input line 179.
-
-<unkp_study_files/figure-latex/unnamed-chunk-6-1.pdf, id=57, 469.755pt x 325.21
-5pt>
+<unkp_study_files/figure-latex/unnamed-chunk-6-1.pdf, id=190, 469.755pt x 325.2
+15pt>
 File: unkp_study_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pd
 f)
 <use unkp_study_files/figure-latex/unnamed-chunk-6-1.pdf>
 Package pdftex.def Info: unkp_study_files/figure-latex/unnamed-chunk-6-1.pdf  u
-sed on input line 186.
+sed on input line 618.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-<unkp_study_files/figure-latex/unnamed-chunk-8-1.pdf, id=58, 469.755pt x 382.42
-876pt>
+[8] [9 <./unkp_study_files/figure-latex/unnamed-chunk-3-1.pdf>]
+<unkp_study_files/figure-latex/unnamed-chunk-8-1.pdf, id=212, 469.755pt x 382.4
+2876pt>
 File: unkp_study_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type pd
 f)
 <use unkp_study_files/figure-latex/unnamed-chunk-8-1.pdf>
 Package pdftex.def Info: unkp_study_files/figure-latex/unnamed-chunk-8-1.pdf  u
-sed on input line 192.
+sed on input line 624.
 (pdftex.def)             Requested size: 469.75386pt x 382.42781pt.
-[3 <./literature_map.pdf>] [4 <./unkp_study_files/figure-latex/unnamed-chunk-3-
-1.pdf>] [5 <./unkp_study_files/figure-latex/unnamed-chunk-6-1.pdf>] [6 <./unkp_
-study_files/figure-latex/unnamed-chunk-8-1.pdf>]
-<unkp_study_files/figure-latex/unnamed-chunk-12-1.pdf, id=164, 469.755pt x 325.
+[10 <./unkp_study_files/figure-latex/unnamed-chunk-6-1.pdf>] [11 <./unkp_study_
+files/figure-latex/unnamed-chunk-8-1.pdf>]
+<unkp_study_files/figure-latex/unnamed-chunk-12-1.pdf, id=244, 469.755pt x 325.
 215pt>
 File: unkp_study_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type p
 df)
 <use unkp_study_files/figure-latex/unnamed-chunk-12-1.pdf>
 Package pdftex.def Info: unkp_study_files/figure-latex/unnamed-chunk-12-1.pdf  
-used on input line 256.
+used on input line 688.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-LaTeX Warning: Reference `fig7' on page 7 undefined on input line 268.
-
-<unkp_study_files/figure-latex/unnamed-chunk-13-1.pdf, id=165, 469.755pt x 433.
+<unkp_study_files/figure-latex/unnamed-chunk-13-1.pdf, id=245, 469.755pt x 433.
 62pt>
 File: unkp_study_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file (type p
 df)
 <use unkp_study_files/figure-latex/unnamed-chunk-13-1.pdf>
 Package pdftex.def Info: unkp_study_files/figure-latex/unnamed-chunk-13-1.pdf  
-used on input line 272.
+used on input line 704.
 (pdftex.def)             Requested size: 469.75386pt x 433.61894pt.
-
-LaTeX Warning: Reference `fig7' on page 7 undefined on input line 276.
-
-[7] [8 <./unkp_study_files/figure-latex/unnamed-chunk-12-1.pdf>] [9 <./unkp_stu
-dy_files/figure-latex/unnamed-chunk-13-1.pdf>] (unkp_study.bbl) [10]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-03.
+[12 <./unkp_study_files/figure-latex/unnamed-chunk-12-1.pdf>] [13 <./unkp_study
+_files/figure-latex/unnamed-chunk-13-1.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
+38.
 (C:\Users\Marci\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+) [14] [15] (unkp_study.bbl) [16]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 350.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 881.
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 448.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 979.
 
-
-Overfull \vbox (0.29314pt too high) detected at line 655
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+1326.
+(C:\Users\Marci\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \vbox (0.29314pt too high) detected at line 1497
  []
 
-[11]
-Underfull \vbox (badness 10000) detected at line 655
- []
-
-
-Underfull \vbox (badness 10000) detected at line 655
- []
-
-[12]
-Underfull \vbox (badness 10000) detected at line 655
+[17]
+Underfull \vbox (badness 10000) detected at line 1497
  []
 
 
-Underfull \vbox (badness 10000) detected at line 655
+Underfull \vbox (badness 10000) detected at line 1497
  []
 
-[13]
-Underfull \vbox (badness 10000) detected at line 655
- []
-
-
-Underfull \vbox (badness 10000) detected at line 655
- []
-
-[14]
-Underfull \vbox (badness 10000) detected at line 655
+[18]
+Underfull \vbox (badness 10000) detected at line 1497
  []
 
 
-Underfull \vbox (badness 10000) detected at line 655
+Underfull \vbox (badness 10000) detected at line 1497
  []
 
-[15]
-Underfull \vbox (badness 10000) detected at line 655
+[19]
+Underfull \vbox (badness 10000) detected at line 1497
  []
 
 
-Underfull \vbox (badness 10000) detected at line 655
+Underfull \vbox (badness 10000) detected at line 1497
  []
 
-[16] [17] (unkp_study.aux)
+[20]
+Underfull \vbox (badness 10000) detected at line 1497
+ []
 
-LaTeX Warning: There were undefined references.
 
- ) 
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+[21]
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+[22]
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+[23]
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+[24]
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+[25]
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+[26]
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+[27]
+Underfull \vbox (badness 10000) detected at line 1497
+ []
+
+
+Overfull \vbox (0.46223pt too high) detected at line 1497
+ []
+
+[28] [29] (unkp_study.aux) ) 
 Here is how much of TeX's memory you used:
- 14535 strings out of 479697
- 217700 string characters out of 2867134
- 620846 words of memory out of 3000000
- 31162 multiletter control sequences out of 15000+200000
- 482395 words of font info for 144 fonts, out of 3000000 for 9000
+ 14716 strings out of 479697
+ 221247 string characters out of 2867134
+ 698705 words of memory out of 3000000
+ 31219 multiletter control sequences out of 15000+200000
+ 486235 words of font info for 182 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,11n,85p,1103b,380s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
-:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C
-:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Us
-ers/Marci/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Us
-ers/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Us
-ers/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Us
-ers/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Use
-rs/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Us
-ers/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Us
-ers/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Use
-rs/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/User
-s/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users
-/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/M
-arci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Mar
-ci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Marci
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Marci/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Marci/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Marci/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Marci/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Marci/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/Marci/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Marci/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb>
-Output written on unkp_study.pdf (17 pages, 1258369 bytes).
+ 79i,12n,85p,1540b,380s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts
+/enc/dvips/lm/lm-ts1.enc}{C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/en
+c/dvips/lm/lm-ec.enc}{C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/enc/dv
+ips/lm/lm-rm.enc}{C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/
+lm/lm-mathit.enc}{C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/
+lm/lm-mathsy.enc}<C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmbx10.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmbx12.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmbx9.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmbxi10.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmmi10.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmr10.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmr12.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/lm/lmr17.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmr5.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmr6.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mr7.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+8.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.
+pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.
+pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.
+pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.
+pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtko10
+.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10
+.pfb><C:/Users/Marci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti1
+0.pfb>
+Output written on unkp_study.pdf (29 pages, 1355721 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
- 63 named destinations out of 1000 (max. 500000)
- 43111 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 525 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
+ 43207 words of extra memory for PDF output out of 51595 (max. 10000000)
 
